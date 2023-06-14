@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 12-06-2023 a las 01:45:30
+-- Tiempo de generación: 14-06-2023 a las 15:16:12
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.0.28
 
@@ -417,7 +417,8 @@ CREATE TABLE `roles` (
 
 INSERT INTO `roles` (`Id_Rol`, `Nom_Rol`) VALUES
 (1, 'Administrador'),
-(2, 'Empleado');
+(2, 'Empleado'),
+(8, 'Cliente');
 
 -- --------------------------------------------------------
 
@@ -430,6 +431,69 @@ CREATE TABLE `role_permisos` (
   `Id_Rol` int(2) NOT NULL,
   `Id_permiso` int(2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `role_permisos`
+--
+
+INSERT INTO `role_permisos` (`id_roleP`, `Id_Rol`, `Id_permiso`) VALUES
+(188, 8, 3),
+(189, 8, 38),
+(190, 8, 39),
+(191, 8, 40),
+(192, 8, 41),
+(193, 8, 42),
+(194, 8, 43),
+(195, 8, 44),
+(196, 8, 45),
+(197, 8, 46),
+(429, 2, 3),
+(430, 2, 46),
+(431, 1, 1),
+(432, 1, 2),
+(433, 1, 3),
+(434, 1, 4),
+(435, 1, 5),
+(436, 1, 6),
+(437, 1, 7),
+(438, 1, 8),
+(439, 1, 9),
+(440, 1, 10),
+(441, 1, 12),
+(442, 1, 13),
+(443, 1, 14),
+(444, 1, 15),
+(445, 1, 16),
+(446, 1, 17),
+(447, 1, 18),
+(448, 1, 19),
+(449, 1, 20),
+(450, 1, 21),
+(451, 1, 22),
+(452, 1, 23),
+(453, 1, 24),
+(454, 1, 25),
+(455, 1, 26),
+(456, 1, 27),
+(457, 1, 28),
+(458, 1, 29),
+(459, 1, 30),
+(460, 1, 31),
+(461, 1, 32),
+(462, 1, 33),
+(463, 1, 34),
+(464, 1, 35),
+(465, 1, 36),
+(466, 1, 37),
+(467, 1, 38),
+(468, 1, 39),
+(469, 1, 40),
+(470, 1, 41),
+(471, 1, 42),
+(472, 1, 43),
+(473, 1, 44),
+(474, 1, 45),
+(475, 1, 46);
 
 -- --------------------------------------------------------
 
@@ -484,7 +548,7 @@ INSERT INTO `usuarios` (`Id_Usuario`, `Id_Rol`, `Nombre`, `Apellido`, `Tipo_Doc`
 (6, 2, 'yerry', 'jimenez', 'cc', 1223123121, 3015454091, 'yerryjimenez1@gmail.com', '12345678', 'ACTIVO'),
 (7, 2, 'guillermo', 'mayo', 'cc', 1009876556, 3046556879, 'guillermomayo1@gmail.com', '12345678', 'ACTIVO'),
 (8, 2, 'cristian', 'mazo', 'cc', 1997667898, 3011234338, 'cristianmazo1@gmail.com', '12345678', 'ACTIVO'),
-(9, 1, 'fernando', 'martinez', 'cc', 1100121219, 3051212988, 'fernandomartinez@gmail.com', '12345678', 'ACTIVO'),
+(9, 2, 'fernando', 'martinez', 'cc', 1100121219, 3051212988, 'fernandomartinez@gmail.com', '12345678', 'ACTIVO'),
 (10, 2, 'david', 'velasquez', 'cc', 1123443980, 3214430989, 'davidvelasquez1@gmail.com', '12345678', 'INACTIVO');
 
 -- --------------------------------------------------------
@@ -733,13 +797,13 @@ ALTER TABLE `proveedores`
 -- AUTO_INCREMENT de la tabla `roles`
 --
 ALTER TABLE `roles`
-  MODIFY `Id_Rol` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `Id_Rol` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT de la tabla `role_permisos`
 --
 ALTER TABLE `role_permisos`
-  MODIFY `id_roleP` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=132;
+  MODIFY `id_roleP` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=476;
 
 --
 -- AUTO_INCREMENT de la tabla `servicio`
