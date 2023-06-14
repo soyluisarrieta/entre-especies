@@ -1,0 +1,20 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    background: #96e5fd;
+    text-align: center;
+    padding: 50px 40px;
+    box-shadow:0 10px 50px #96e5fd;
+}
+.lab{
+    width: 180px;
+}
+.but{
+    width: 180px; 
+}

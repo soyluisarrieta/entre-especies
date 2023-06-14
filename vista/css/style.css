@@ -1,0 +1,19 @@
+*{
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+  font-family: sans-serif;
+  background: rgb(239, 247, 255);
+}
+
+.form-register{
+  width: 98%;
+  max-width: 500px;
+}
+.pagina {
+  height: 100px;
+  width: 120%;
+  margin-right: 50 px;
+}
